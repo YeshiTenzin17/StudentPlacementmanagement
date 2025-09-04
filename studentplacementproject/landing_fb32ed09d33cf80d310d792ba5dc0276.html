@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Cell Landing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgb(254, 226, 226);
+    }
+    .ribbon {
+      background-color: rgb(80, 70, 254);
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .ribbon .nav {
+      display: flex;
+      gap: 20px;
+    }
+    .ribbon .nav a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .header {
+      color: black;
+      padding: 20px;
+      font-size: 60px;
+      font-weight: bolder;
+      text-align: center;
+    }
+    .comp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .inbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 20px;
+    }
+    .box {
+      height: 180px;
+      width: 180px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-right: 30px;
+    }
+    .line {
+      height: 1px;
+      background-color: black;
+      width: 80%;
+      margin: 10px auto;
+    }
+    .inbox h1 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="full">
+    <div class="ribbon">
+      <div class="home"><strong>Placement Cell</strong></div>
+      <div class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="overview.html">Overview</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="analytics.html">Analytics</a>
+      </div>
+    </div>
+
+    <div class="header">PLACEMENT CELL</div>
+
+    <div class="comp">
+      <div class="inbox">
+        <div class="box" style="background-color: rgb(135, 239, 154)">POSTER</div>
+        <div>
+          <h1>Student Poster</h1>
+          <div style="font-size: 20px; margin-bottom: 15px">Student Name</div>
+          <div style="font-size: 20px">Role</div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="inbox">
+        <div class="box" style="background-color: rgb(254, 134, 134)">POSTER</div>
+        <div>
+          <h1>Company Poster</h1>
+          <div style="font-size: 20px; margin-bottom: 15px">Company</div>
+          <div style="font-size: 20px">Role</div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="inbox">
+        <div class="box" style="background-color: rgb(240, 118, 239)">POSTER</div>
+        <div>
+          <h1>Event Poster</h1>
+          <div style="font-size: 20px">Role</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
