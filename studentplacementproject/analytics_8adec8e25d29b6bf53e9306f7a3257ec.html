@@ -3,128 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Placement Analytics</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fddedf;
-      color: #1c1c1c;
-    }
-    header {
-      background-color: #6048f5;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-    header a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1rem;
-      padding: 1.5rem;
-    }
-    .card {
-      background-color: #fde5e7;
-      border: 1px solid #e0cfcf;
-      border-radius: 1rem;
-      padding: 1rem;
-    }
-    .progress-bar {
-      background-color: #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 10px;
-      margin-top: 4px;
-    }
-    .progress {
-      height: 100%;
-      background-color: #89c2ff;
-    }
-    .donut-legend span {
-      display: flex;
-      align-items: center;
-      margin: 0.3rem 0;
-    }
-    .donut-legend span i {
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      margin-right: 8px;
-      border-radius: 50%;
-    }
-    canvas {
-      display: block;
-      margin: auto;
-    }
-  </style>
+  <title>Placement Cell • Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header>
-    <h1>STUDENT PLACEMENT 🎓</h1>
-    <nav>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="overview.html">Overview</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="landing.html">Landing Page</a>
-    </nav>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand"><span class="brand-badge"></span> Placement Cell</div>
+      <nav class="nav">
+        <a href="landing_fb32ed09d33cf80d310d792ba5dc0276.html">Landing</a>
+        <a href="dashboard_b423d8b856db19e6014fc6da91903035.html">Dashboard</a>
+        <a href="overview_2f377ad933815ea03c3397012b60a80f.html">Overview</a>
+        <a href="schedule_d5a516bf13684f585ef6b6349142bdd2.html">Schedule</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="card">
-      <h3>Student Analytics</h3>
-      <canvas id="studentChart" width="180" height="180"></canvas>
-      <div class="donut-legend">
-        <span><i style="background-color: #f9df75;"></i>Eligible</span>
-        <span><i style="background-color: #89c2ff;"></i>Interviewed</span>
-        <span><i style="background-color: #a3e6b1;"></i>Placed</span>
+  <main class="container">
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">Student Analytics</h3>
+        <canvas id="studentChart" width="180" height="180"></canvas>
+        <div class="space-y-2" style="margin-top: 10px">
+          <span class="pill" style="border:1px solid rgba(124,58,237,.35)">Eligible</span>
+          <span class="pill success">Placed</span>
+          <span class="pill" style="background: rgba(34,211,238,.18); color: #a5f3fc; border:1px solid rgba(34,211,238,.35)">Interviewed</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Staff Analytics</h3>
+        <p class="muted">Registrations</p>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        <p class="muted">Eligible Matches</p>
+        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        <p class="muted">Scheduled Interviews</p>
+        <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
+        <p class="muted">Placements</p>
+        <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Placement Analytics</h3>
+        <canvas id="barChart" width="300" height="200"></canvas>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Updates</h3>
+        <ul class="space-y-2">
+          <li>25 students placed at Infosys</li>
+          <li>TCS drive on July 3rd</li>
+          <li>Resume workshop scheduled next week</li>
+        </ul>
       </div>
     </div>
+  </main>
 
-    <div class="card">
-      <h3>Staff Analytics</h3>
-      <p>Registrations</p>
-      <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-      <p>Eligible Matches</p>
-      <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-      <p>Scheduled Interviews</p>
-      <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
-      <p>Placements</p>
-      <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
-    </div>
+  <div class="footer">© 2025 Placement Cell</div>
 
-    <div class="card">
-      <h3>Placement Analytics</h3>
-      <canvas id="barChart" width="300" height="200"></canvas>
-    </div>
-
-    <div class="card">
-      <h3>Updates</h3>
-      <ul>
-        <li>• 25 students placed at Infosys</li>
-        <li>• TCS drive on July 3rd</li>
-        <li>• Resume workshop scheduled next week</li>
-      </ul>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    const ctx1 = document.getElementById('studentChart').getContext('2d');
-    new Chart(ctx1, {
+    const studentCtx = document.getElementById('studentChart').getContext('2d');
+    new Chart(studentCtx, {
       type: 'doughnut',
       data: {
         labels: ['Eligible', 'Interviewed', 'Placed'],
         datasets: [{
           data: [40, 40, 20],
-          backgroundColor: ['#f9df75', '#89c2ff', '#a3e6b1']
+          backgroundColor: ['#7c3aed', '#22d3ee', '#22c55e']
         }]
       },
       options: {
@@ -133,20 +79,20 @@
       }
     });
 
-    const ctx2 = document.getElementById('barChart').getContext('2d');
-    new Chart(ctx2, {
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
       type: 'bar',
       data: {
         labels: ['CSE', 'IT', 'ECE', 'ME'],
         datasets: [{
           label: 'Placements',
           data: [80, 60, 70, 50],
-          backgroundColor: ['#f9df75', '#a3e6b1', '#89c2ff', '#f58ea3']
+          backgroundColor: ['#7c3aed', '#22c55e', '#22d3ee', '#f59e0b']
         }]
       },
       options: {
         plugins: { legend: { display: false } },
-        scales: { y: { beginAtZero: true } }
+        scales: { y: { beginAtZero: true, grid: { color: 'rgba(124,58,237,.2)' } }, x: { grid: { color: 'rgba(124,58,237,.1)' } } }
       }
     });
   </script>

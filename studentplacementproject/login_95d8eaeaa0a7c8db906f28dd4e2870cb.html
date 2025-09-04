@@ -3,98 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Placement Cell Login</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-    }
-    .container {
-      max-width: 400px;
-      margin: 80px auto;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .main-header {
-      background-color: #6a3495;
-      text-align: center;
-      padding: 25px 0;
-    }
-    .main-header h1 {
-      color: white;
-      font-size: 26px;
-      font-weight: bold;
-      margin: 0;
-    }
-    .login-box {
-      background-color: #f7a6af;
-      padding: 30px;
-    }
-    .login-box h2 {
-      font-size: 22px;
-      margin-bottom: 25px;
-      color: #000;
-      text-align: center;
-    }
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #000;
-    }
-    form input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .forgot-link {
-      display: block;
-      text-align: right;
-      font-size: 13px;
-      color: #111;
-      margin-bottom: 20px;
-      text-decoration: none;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #d42c2c;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    button:hover {
-      background-color: #aa1f1f;
-    }
-  </style>
+  <title>Placement Cell • Login</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="main-header">
-      <h1>🎓 PLACEMENT CELL</h1>
-    </header>
-    <div class="login-box">
-      <h2>Login</h2>
-      <form action="dashboard.html">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter your username" required />
-
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required />
-
-        <a href="#" class="forgot-link">Forget Password?</a>
-        <button type="submit">Log in</button>
-      </form>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand"><span class="brand-badge"></span> Placement Cell</div>
+      <nav class="nav">
+        <a href="landing_fb32ed09d33cf80d310d792ba5dc0276.html">Landing</a>
+        <a href="dashboard_b423d8b856db19e6014fc6da91903035.html">Dashboard</a>
+        <a href="overview_2f377ad933815ea03c3397012b60a80f.html">Overview</a>
+        <a href="schedule_d5a516bf13684f585ef6b6349142bdd2.html">Schedule</a>
+        <a href="analytics_8adec8e25d29b6bf53e9306f7a3257ec.html">Analytics</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <div class="auth-card">
+      <div class="card auth-box">
+        <div class="auth-header">
+          <h2>Login</h2>
+          <small class="muted">Welcome back. Please sign in to continue.</small>
+        </div>
+        <form action="dashboard_b423d8b856db19e6014fc6da91903035.html" class="space-y-3">
+          <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required />
+          </div>
+          <div style="text-align: right">
+            <a href="#" class="muted">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn" style="width: 100%">Log in</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">© 2025 Placement Cell</div>
 </body>
 </html>

@@ -3,115 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Dashboard</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #FFE2E2;
-    }
-    .header {
-      background-color: #6a0dad;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 30px;
-      font-size: 18px;
-    }
-    .sidebar {
-      background-color: #FFE2E2;
-      padding: 20px;
-      width: 200px;
-      height: 100vh;
-      position: fixed;
-      border-right: 2px solid #7d7373;
-    }
-    .sidebar a {
-      display: block;
-      margin-bottom: 10px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-    .main {
-      margin-left: 220px;
-      padding: 40px;
-    }
-    h1 {
-      color: #6a0dad;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #6a0dad;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #5a0cab;
-    }
-  </style>
+  <title>Placement Cell • Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand"><span class="brand-badge"></span> Placement Cell</div>
+      <nav class="nav">
+        <a href="landing_fb32ed09d33cf80d310d792ba5dc0276.html">Landing</a>
+        <a href="overview_2f377ad933815ea03c3397012b60a80f.html">Overview</a>
+        <a href="schedule_d5a516bf13684f585ef6b6349142bdd2.html">Schedule</a>
+        <a href="analytics_8adec8e25d29b6bf53e9306f7a3257ec.html">Analytics</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="header">
-    <div>PLACEMENT CELL</div>
-    <div><a href="overview.html" style="color:white; text-decoration:none;">Overview</a></div>
-  </div>
-
-  <div class="sidebar">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="analytics.html">Analytics</a>
-    <a href="landing.html">Landing Page</a>
-  </div>
-
-  <div class="main">
+  <main class="container">
     <h1>Student Details</h1>
-    <form id="placementForm">
-      <div class="form-group">
-        <label for="studentName">Student Name</label>
-        <input type="text" id="studentName" name="studentName">
-      </div>
-      <div class="form-group">
-        <label for="registerNumber">Register Number</label>
-        <input type="text" id="registerNumber" name="registerNumber">
-      </div>
-      <div class="form-group">
-        <label for="tenthMarks">10th Marks</label>
-        <input type="text" id="tenthMarks" name="tenthMarks">
-      </div>
-      <div class="form-group">
-        <label for="twelfthMarks">12th Marks</label>
-        <input type="text" id="twelfthMarks" name="twelfthMarks">
-      </div>
-      <div class="form-group">
-        <label for="semesterResults">Semester Results</label>
-        <input type="text" id="semesterResults" name="semesterResults">
-      </div>
-      <div class="form-group">
-        <label for="aggregate">Consolidated Aggregate</label>
-        <input type="text" id="aggregate" name="aggregate">
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+    <div class="card">
+      <form id="placementForm" class="space-y-3">
+        <div>
+          <label for="studentName">Student Name</label>
+          <input type="text" id="studentName" name="studentName" placeholder="Jane Doe">
+        </div>
+        <div>
+          <label for="registerNumber">Register Number</label>
+          <input type="text" id="registerNumber" name="registerNumber" placeholder="REG123456">
+        </div>
+        <div>
+          <label for="tenthMarks">10th Marks</label>
+          <input type="text" id="tenthMarks" name="tenthMarks" placeholder="e.g., 92%">
+        </div>
+        <div>
+          <label for="twelfthMarks">12th Marks</label>
+          <input type="text" id="twelfthMarks" name="twelfthMarks" placeholder="e.g., 88%">
+        </div>
+        <div>
+          <label for="semesterResults">Semester Results</label>
+          <input type="text" id="semesterResults" name="semesterResults" placeholder="e.g., 8.4 CGPA">
+        </div>
+        <div>
+          <label for="aggregate">Consolidated Aggregate</label>
+          <input type="text" id="aggregate" name="aggregate" placeholder="e.g., 8.2 CGPA">
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <div class="footer">© 2025 Placement Cell</div>
 
   <script>
     document.getElementById('placementForm').addEventListener('submit', function(e) {
@@ -119,6 +60,5 @@
       alert("Form submitted successfully!");
     });
   </script>
-
 </body>
 </html>
