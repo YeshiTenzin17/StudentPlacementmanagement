@@ -4,92 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Upcoming Company Visits</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f4f8;
-      margin: 0;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-    .nav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .nav a {
-      margin: 0 10px;
-      color: #4b6cb7;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th {
-      background-color: #4b6cb7;
-      color: white;
-      padding: 12px;
-      font-size: 16px;
-      text-align: left;
-    }
-    td {
-      padding: 12px;
-      font-size: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-    tr:hover {
-      background-color: #f1f7ff;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>📌 Upcoming Placement Schedule</h1>
-    <div class="nav">
-      <a href="dashboard.html">Dashboard</a>
-      <a href="overview.html">Overview</a>
-      <a href="analytics.html">Analytics</a>
+  <header class="appbar">
+    <div class="appbar-inner container">
+      <div class="brand">Placement Cell</div>
+      <nav class="nav">
+        <a href="dashboard_b423d8b856db19e6014fc6da91903035.html">Dashboard</a>
+        <a href="overview_2f377ad933815ea03c3397012b60a80f.html">Overview</a>
+        <a class="active" href="schedule_d5a516bf13684f585ef6b6349142bdd2.html">Schedule</a>
+        <a href="analytics_8adec8e25d29b6bf53e9306f7a3257ec.html">Analytics</a>
+      </nav>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Company</th>
-          <th>Date</th>
-          <th>Role</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Company A</td>
-          <td>02/06/2025</td>
-          <td>Software Engineer</td>
-        </tr>
-        <tr>
-          <td>Company B</td>
-          <td>05/06/2025</td>
-          <td>Data Analyst</td>
-        </tr>
-        <tr>
-          <td>Company C</td>
-          <td>09/06/2025</td>
-          <td>Network Administrator</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  </header>
+
+  <main class="container">
+    <h1>Upcoming Placement Schedule</h1>
+    <div class="spacer-md"></div>
+    <section class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Date</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Company A</td>
+            <td>02/06/2025</td>
+            <td>Software Engineer</td>
+          </tr>
+          <tr>
+            <td>Company B</td>
+            <td>05/06/2025</td>
+            <td>Data Analyst</td>
+          </tr>
+          <tr>
+            <td>Company C</td>
+            <td>09/06/2025</td>
+            <td>Network Administrator</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 </body>
 </html>
